@@ -1,0 +1,60 @@
+.button__edit {
+  width: 107px;
+  height: 16px;
+  opacity: 70%;
+  gap: 8px;
+  margin: 0;
+}
+
+.button__edit-icon {
+  width: 12px;
+  height: 3px;
+  top: 5px;
+  left: 13px;
+  rotate: -135 deg;
+  color: #212121;
+  margin: 0;
+}
+
+
+button__edit-text {
+  width: 84px;
+  height: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #212121;
+  margin: 0;
+}
+
+.button__post {
+  background-color: #212121;
+  width: 149px;
+  height: 52px;
+  padding: 18px 32px;
+  gap: 8px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+button__post-icon {
+  width: 12px;
+  height: 12px;
+  border-width: 2px;
+  border: 2px solid #FCF5E5;
+  margin: 0;
+}
+
+.button__post-text {
+  width: 73px;
+  height: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #FCF5E5;
+}
