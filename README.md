@@ -1,10 +1,4 @@
-# Project 3: Spots
-
-### Overview  
-
-* Intro  
-* Figma  
-* Images  
+# Project 3: Spots 
   
 **Intro**
   
@@ -14,7 +8,7 @@ The site is designed to work on all screen sizes from desktop down to mobile dev
 
 **github**  
   
-* [Link to the project on github](https://github.com/vanglor82/se_project_spots)
+* [Link to the project on github](https://github.com/vanglor82/se_project_spots.git)
   
 **Images**  
   
