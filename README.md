@@ -8,14 +8,14 @@
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This project is designed to be used as a social media page for people to upload and share their adventures with other fellow Spot users. 
+
+The site is designed to work on all screen sizes from desktop down to mobile devices. The webpage consist of html, css, and a mixture of display flex and grid to align all the elements and make the site responsive.
+
+**github**  
   
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+* [Link to the project on github](https://github.com/vanglor82/se_project_spots.git)
   
 **Images**  
   
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+Screenshot of the project images. [here](https://github.com/vanglor82/se_project_spots/blob/87fcf5dfba76957ae51a07d1f43685888ad9dfc6/Screenshot%202025-02-24%20162037.png), 
