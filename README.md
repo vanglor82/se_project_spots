@@ -14,7 +14,7 @@ The site is designed to work on all screen sizes from desktop down to mobile dev
 
 **github**  
   
-* [Link to the project on github](https://github.com/vanglor82/se_project_spots.git)
+* [Link to the project on github](https://github.com/vanglor82/se_project_spots)
   
 **Images**  
   
