@@ -1,19 +1,3 @@
 .content {
   padding: 0 20px;
 }
-
-.profile__edit-btn {
-
-}
-
-.profile__add-btn {
-  width: 149px;
-  height: 52px;
-  background: #212121;
-  color: #fcf5e5;
-  font-family: Poppins;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 0%;
-}
