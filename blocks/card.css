@@ -3,30 +3,39 @@
   width: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 8px;
+  /* The Val Thoren imnage is a squared, I added the border radius to make it inline with the rest of the images and figmna. */
 }
 
 .card__title {
-  width: 353px;
+  max-width: 353px;
   height: 24px;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+   /* If I don't set the height, the title under the 3 bottom images gets cut off */
   font-weight: 500;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 353px;
+  margin: 12px 0 0;
+  color: #212121;
 }
 
 .card__like-btn {
   background-image: url(../images/heart.png);
   width: 23px;
   height: 20px;
-  order: none;
   border: none;
   background-color: transparent;
   opacity: 40%;
+  margin: 12px 0 0;
+}
+
+.card__like-btn:hover {
+  opacity: 100%;
+  color: blue;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .card__content {
@@ -38,5 +47,9 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+  }
+
+  .card__title {
+    font-size: 16px;
   }
 }
