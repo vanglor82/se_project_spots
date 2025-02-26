@@ -6,9 +6,13 @@ This project is designed to be used as a social media page for people to upload 
 
 The site is designed to work on all screen sizes from desktop down to mobile devices. The webpage consist of html, css, and a mixture of display flex and grid to align all the elements and make the site responsive.
 
+**video** 
+
+* [Link to the project video](https://drive.google.com/file/d/1T97JeC-WLAnB08otlLkHx2vL0HCSmcar/view?usp=sharing)
+
 **github**  
   
-* [Link to the project on github]()
+* [Link to the project on github](https://github.com/vanglor82/se_project_spots.git)
   
 **Images**  
   
