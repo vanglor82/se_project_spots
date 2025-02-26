@@ -58,10 +58,10 @@
 .profile__edit-btn:hover {
   opacity: 100%;
   cursor: pointer;
-  transition: opcatity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.profile__pencil-icon {
+.profile__edit-icon {
   width: 18px;
   height: 16px;
   margin-right: 8px;
@@ -84,7 +84,6 @@
 
 .profile__add-btn:hover {
   cursor: pointer;
-  background: #3140cc;
   transition: 0.3s ease-in-out;
 }
 
@@ -125,6 +124,7 @@
   }
 
   .profile__add-btn {
+    width: 100%;
     margin: 0;
   }
 
