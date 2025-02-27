@@ -3,6 +3,7 @@
   min-height: 100vh;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   color: #212121;
+  max-width: 1440px;
 }
 
 .page__section {
