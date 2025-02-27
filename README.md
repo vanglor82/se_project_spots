@@ -12,8 +12,8 @@ The site is designed to work on all screen sizes from desktop to mobile devices.
 
 ## Project Deployment
 
-- Link to the project video(https://drive.google.com/file/d/1T97JeC-WLAnB08otlLkHx2vL0HCSmcar/view?usp=sharing) 
+- Link to the project video(https://drive.google.com/file/d/1T97JeC-WLAnB08otlLkHx2vL0HCSmcar/view?usp=drive_link) 
   
-- Link to the project on github(https://github.com/vanglor82/se_project_spots.git)  
+- Link to the project on github(https://vanglor82.github.io/se_project_spots/)  
   
 - Link to screenshot image(https://github.com/vanglor82/se_project_spots/blob/87fcf5dfba76957ae51a07d1f43685888ad9dfc6/Screenshot%202025-02-24%20162037.png), 
