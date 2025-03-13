@@ -71,6 +71,10 @@
   opacity: 40%;
 }
 
+.modal__input:hover {
+  opacity: 100%;
+}
+
 .modal__submit-btn {
   width: 156px;
   padding: 18px 0;
@@ -80,6 +84,12 @@
   font-weight: 500;
   line-height: 16px;
   border-radius: 8px;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
