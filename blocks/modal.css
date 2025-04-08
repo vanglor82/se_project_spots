@@ -11,20 +11,34 @@
   flex-direction: column;
   padding: 0 16px;
   visibility: hidden;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 
 .modal_opened {
+  opacity: 1;
   visibility: visible;
 }
 
 .modal__container {
   position: relative;
-  background-color: #fff;
   max-width: 730px;
+  background-color: #fff;
   border-radius: 8px;
-  padding: 32px 50px;
   width: 100%;
   box-sizing: border-box;
+  padding: 32px 50px;
+}
+
+.modal__container_preview {
+  padding: 0;
+  background-color: transparent;
+}
+
+.modal__image {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
 }
 
 .modal__close-btn {
@@ -34,13 +48,43 @@
   width: 40px;
   height: 40px;
   background-image: url('../images/close.svg');
-  border: hidden;
+  border: none;
   opacity: 40%;
+  cursor: pointer;
+}
+
+.modal__close-btn_preview {
+  background-image: url('../images/closewhite.svg');
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  right: -50px;
+  opacity: 100%;
+}
+
+.modal__close-btn_preview:hover {
+  background-image: url('../images/modalclosehover.svg');
 }
 
 .modal__close-btn:hover {
   opacity: 100%;
-  cursor: pointer;
+}
+
+.modal__caption {
+  margin: 8px 0 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  height: 32px;
+  background: #212121;
+  color: #fff;
+  border-radius: 8px;
+  max-width: 214px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 4px 8px;
 }
 
 .modal__title {
@@ -93,11 +137,8 @@
 }
 
 @media screen and (max-width: 627px) {
-  .modal {
-    padding: 0 10px;
-  }
   .modal__container {
-    padding: 12px;
+    padding: 0 auto;
   }
 
   .modal__close-btn {
@@ -118,5 +159,25 @@
 
   .modal__submit-btn {
     width: 100%;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 130px;
+    padding: 4px 8px;
+    height: 27px;
+  }
+
+  .modal__close-btn_preview {
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    padding: 0;
+  }
+
+  .modal__image {
+    max-width: 288px;
+    border-radius: 4px;
   }
 }
