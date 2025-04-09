@@ -27,7 +27,6 @@
   width: 23px;
   height: 20px;
   border: none;
-  background-color: transparent;
   opacity: 40%;
   margin: 12px 0 0;
 }
@@ -42,6 +41,8 @@
   background-image: url(../images/liked.svg);
   width: 22px;
   opacity: 100%;
+  background-color: transparent;
+  border: none;
 }
 
 .card__like-btn_liked:hover {
@@ -54,7 +55,7 @@
   width: 32px;
   height: 32px;
   border: none;
-  background-color: transparent;
+  background: transparent;
   position: absolute;
   top: 10px;
   right: 10px;
