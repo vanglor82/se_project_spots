@@ -48,16 +48,10 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url('../images/Close Icon.svg');
-  /* border: none; */
+  background-image: url('../images/close.svg');
+  background-color: transparent;
+  border: none;
   cursor: pointer;
-  /* opacity: 40%; */
-  /* I went back to project 4 and used the figma link there
-  and downloaded the exact close icon from the exact location
-  you have marked on your screenshots. It's there and
-  interactive but nothing is showing,so I left it as is for you to review.
-  I can upload screenshot as proof of where I'm getting this latest
-  close icon if need.*/
 }
 
 .modal__close-btn_preview {
@@ -69,11 +63,11 @@
 }
 
 .modal__close-btn_preview:hover {
-  background-image: url('../images/modalclosehover.svg');
+  background-image: url('../images/closehover.svg');
 }
 
 .modal__close-btn:hover {
-  opacity: 100%;
+  opacity: 60%;
 }
 
 .modal__caption {
