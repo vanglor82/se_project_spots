@@ -115,8 +115,13 @@
   opacity: 40%;
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 .modal__input:hover {
   opacity: 100%;
+  cursor: pointer;
 }
 
 .modal__submit-btn {
@@ -130,11 +135,28 @@
   border-radius: 8px;
 }
 
+.modal__submit-btn:disabled {
+  opacity: 50%;
+}
+
+.modal__submit-btn:disabled:hover {
+  cursor: default;
+  opacity: 50%;
+}
+
+.modal__error {
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 70%;
+}
+
 .modal__submit-btn:hover {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   opacity: 80%;
 }
+
 
 @media screen and (max-width: 627px) {
   .modal__container {
@@ -186,3 +208,5 @@
     font-size: 16px;
   }
 }
+
+
