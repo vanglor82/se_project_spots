@@ -23,7 +23,7 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
-];
+]
 
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const addEditBtn = document.querySelector(".profile__add-btn");
@@ -84,12 +84,32 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function onEscPress(evt) {
+  evt.preventDefault();
+  if (evt.key === "Escape") {
+    const activeModal = document.querySelector(".modal_opened");
+    if (activeModal) {
+    closeModal(activeModal);
+    }
+  }
+}
+
+function onClickOverlay(evt) {
+  if (evt.target.classList.contains("modal_opened")) {
+    closeModal(evt.target);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  modal.addEventListener("mousedown", onClickOverlay);
+  document.addEventListener("keydown", onEscPress);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("mousedown", onClickOverlay);
+  document.removeEventListener("keydown", onEscPress);
 }
 
 function handleEditFormSubmit(evt) {
@@ -105,6 +125,7 @@ function handleAddFormSubmit(evt) {
     name: addModalCaptionInput.value,
     link: addModalLinkInput.value,
   };
+
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset();
@@ -115,7 +136,7 @@ function handleAddFormSubmit(evt) {
 profileEditBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editFormElement, [editModalNameInput, editModalDescriptionInput]);
+  resetValidation(editFormElement, [editModalNameInput, editModalDescriptionInput], settings);
   openModal(editModal);
 });
 
