@@ -108,7 +108,7 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
   modal.removeEventListener("mousedown", onClickOverlay);
-  document.removeEventListener("keydown", onEscPress);
+ document.removeEventListener("keydown", onEscPress);
 }
 
 function handleEditFormSubmit(evt) {
