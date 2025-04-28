@@ -119,6 +119,7 @@ function handleEditFormSubmit(evt) {
 }
 
 function handleAddFormSubmit(evt) {
+  evt.preventDefault();
   const inputValues = {
     name: addModalCaptionInput.value,
     link: addModalLinkInput.value,
@@ -127,7 +128,6 @@ function handleAddFormSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset();
-  disableButton(addModalSubmit);
   closeModal(addModal);
 }
 
