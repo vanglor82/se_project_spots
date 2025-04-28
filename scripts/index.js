@@ -85,7 +85,6 @@ function getCardElement(data) {
 }
 
 function onEscPress(evt) {
-  evt.preventDefault();
   if (evt.key === "Escape") {
     const activeModal = document.querySelector(".modal_opened");
     if (activeModal) {
@@ -95,7 +94,7 @@ function onEscPress(evt) {
 }
 
 function onClickOverlay(evt) {
-  if (evt.target.classList.contains("modal_opened")) {
+  if (evt.target.classList.contains("modal")) {
     closeModal(evt.target);
   }
 }
@@ -120,7 +119,6 @@ function handleEditFormSubmit(evt) {
 }
 
 function handleAddFormSubmit(evt) {
-  evt.preventDefault();
   const inputValues = {
     name: addModalCaptionInput.value,
     link: addModalLinkInput.value,
