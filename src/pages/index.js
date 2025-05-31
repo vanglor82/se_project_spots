@@ -1,3 +1,11 @@
+import "./index.css";
+import {
+  enableValidation,
+  settings,
+  disableButton,
+  resetValidation
+} from "../scripts/validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -23,7 +31,7 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
-]
+];
 
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const addEditBtn = document.querySelector(".profile__add-btn");
@@ -33,7 +41,9 @@ const profileDescription = document.querySelector(".profile__description");
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
-const editModalDescriptionInput = editModal.querySelector ("#profile-description-input");
+const editModalDescriptionInput = editModal.querySelector(
+  "#profile-description-input"
+);
 
 const addModal = document.querySelector("#add-modal");
 const addFormElement = addModal.querySelector(".modal__form");
@@ -88,7 +98,7 @@ function onEscPress(evt) {
   if (evt.key === "Escape") {
     const activeModal = document.querySelector(".modal_opened");
     if (activeModal) {
-    closeModal(activeModal);
+      closeModal(activeModal);
     }
   }
 }
@@ -108,7 +118,7 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
   modal.removeEventListener("mousedown", onClickOverlay);
- document.removeEventListener("keydown", onEscPress);
+  document.removeEventListener("keydown", onEscPress);
 }
 
 function handleEditFormSubmit(evt) {
@@ -135,7 +145,11 @@ function handleAddFormSubmit(evt) {
 profileEditBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editFormElement, [editModalNameInput, editModalDescriptionInput], settings);
+  resetValidation(
+    editFormElement,
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  );
   openModal(editModal);
 });
 
@@ -145,8 +159,7 @@ addEditBtn.addEventListener("click", () => {
 
 closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
-  button.addEventListener("click", () =>
-  closeModal(popup));
+  button.addEventListener("click", () => closeModal(popup));
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
@@ -156,3 +169,5 @@ initialCards.forEach((card) => {
   const cardElement = getCardElement(card);
   cardsList.append(cardElement);
 });
+
+enableValidation(settings);
