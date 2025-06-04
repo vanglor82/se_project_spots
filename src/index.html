@@ -19,17 +19,27 @@
     <div class="page">
       <header class="header">
         <img
-        src="<%=require('./images/logo.svg')%>"
-        alt="Spot Logo"
-        class="header__logo" />
+          src="<%=require('./images/logo.svg')%>"
+          alt="Spot Logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/avatar.png')%>"
-            alt="Profile Picture"
-            class="profile__image"
-          />
+          <div class="profile__image-container">
+            <button class="profile__image-btn">
+              <img
+                src="<%=require('./images/white-pencil.svg')%>"
+                alt="Avatar Pencil Icon"
+                class="profile__pencil-icon"
+              />
+            </button>
+            <img
+              src="<%=require('./images/avatar.png')%>"
+              alt="Profile Picture"
+              class="profile__image"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Cole</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -53,11 +63,7 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <img
-                  src=""
-                  alt=""
-                  class="card__image"
-                />
+                <img src="" alt="" class="card__image" />
                 <div class="card__content">
                   <button type="button" class="card__delete-btn"></button>
                   <h2 class="card__title"></h2>
@@ -76,34 +82,32 @@
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" class="modal__form">
-            <label
-              for="profile-name-input"
-              class="modal__label"
-            >
+            <label for="profile-name-input" class="modal__label">
               Name
-            <input
-              id="profile-name-input"
-              class="modal__input"
-              placeholder="Type your name"
-              minlength="2"
-              maxlength="40"
-              required
-            >
-            <span id="profile-name-input-error" class="modal__error"></span>
+              <input
+                id="profile-name-input"
+                class="modal__input"
+                placeholder="Type your name"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
-            <label
-              for="profile-description-input"
-              class="modal__label">
+            <label for="profile-description-input" class="modal__label">
               Description
-            <input
-              id="profile-description-input"
-              class="modal__input"
-              placeholder="Desscribe yourself"
-              minlength="2"
-              maxlength="200"
-              required
-              >
-              <span id="profile-description-input-error" class="modal__error"></span>
+              <input
+                id="profile-description-input"
+                class="modal__input"
+                placeholder="Desscribe yourself"
+                minlength="2"
+                maxlength="200"
+                required
+              />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -117,43 +121,66 @@
             <label for="add-link-input" class="modal__label">
               Image link
               <input
-              id="add-link-input"
+                id="add-link-input"
+                class="modal__input"
+                placeholder="Place a link to the picture"
+                type="url"
+                required
+              />
+              <span id="add-link-input-error" class="modal__error"></span>
+            </label>
+            <label for="add-caption-input" class="modal__label">
+              Caption
+              <input
+                id="add-caption-input"
+                class="modal__input"
+                placeholder="Type your caption"
+                minlength="2"
+                maxlength="30"
+                required
+              />
+              <span id="add-caption-input-error" class="modal__error"></span>
+            </label>
+            <button
+              id="modal__submit-btn_disabled"
+              type="submit"
+              class="modal__submit-btn"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="preview-modal">
+        <div class="modal__container modal__container_preview">
+          <button
+            type="button"
+            class="modal__close-btn modal__close-btn_preview"
+          ></button>
+          <img src="" alt="" class="modal__image" />
+          <p class="modal__caption"></p>
+        </div>
+      </div>
+    <div class="modal" id="image-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close-btn"></button>
+        <h2 class="modal__title">Edit profile avatar</h2>
+        <form name="edit-image-profile" class="modal__form">
+          <label for="profile-image-input" class="modal__label">
+            Profile Picture
+            <input
+              id="profile-image-input"
               class="modal__input"
-              placeholder="Place a link to the picture"
+              name="profile-image-input"
+              placeholder="Paste the link to an image"
               type="url"
               required
             />
-            <span id="add-link-input-error" class="modal__error"></span>
-            </label>
-            <label
-              for="add-caption-input"
-              class="modal__label">
-              Caption
-            <input
-              id="add-caption-input"
-              class="modal__input"
-              placeholder="Type your caption"
-              minlength="2"
-              maxlength="30"
-              required
-            >
-            <span id="add-caption-input-error" class="modal__error"></span>
-            </label>
-            <button id="modal__submit-btn_disabled" type="submit" class="modal__submit-btn">Save</button>
-          </form>
-        </div>
+            <span id="profile-image-input-error" class="modal__error"></span>
+          </label>
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
     </div>
-    <div class="modal" id="preview-modal">
-      <div class="modal__container modal__container_preview">
-        <button type="button" class="modal__close-btn modal__close-btn_preview"></button>
-        <img
-        src=""
-        alt=""
-        class="modal__image"
-        />
-        <p class="modal__caption"></p>
-    </div>
-   </div>
-  </div>
   </body>
 </html>

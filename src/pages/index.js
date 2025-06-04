@@ -45,13 +45,11 @@ const api = new Api({
 
 api
   .getAppInfo()
-  .then(([cards, users]) => {
+  .then(([cards, user]) => {
     cards.forEach((card) => {
       const cardElement = getCardElement(card);
       cardsList.append(cardElement);
     });
-    const user = users[0];
-    profileId = user._id; // Set the profile ID after fetching user data
     profileName.textContent = user.name;
     profileDescription.textContent = user.about;
     profileImage.src = user.avatar;
@@ -62,8 +60,10 @@ const profileEditBtn = document.querySelector(".profile__edit-btn");
 const profileAddBtn = document.querySelector(".profile__add-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
+
+const imageModal = document.querySelector("#image-modal");
 const profileImage = document.querySelector(".profile__image");
-// const profileId = ""; // Initialize profileId to an empty string
+const profileImageBtn = document.querySelector(".profile__image-btn");
 
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
@@ -190,6 +190,10 @@ profileEditBtn.addEventListener("click", () => {
 
 profileAddBtn.addEventListener("click", () => {
   openModal(addModal);
+});
+
+profileImageBtn.addEventListener("click", () => {
+  openModal(imageModal);
 });
 
 closeButtons.forEach((button) => {

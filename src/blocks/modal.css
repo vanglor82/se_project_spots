@@ -92,7 +92,7 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 32px;
-  width: 169px;
+  width: 630px;
 }
 
 .modal__label {
@@ -113,6 +113,8 @@
   border-radius: 8px;
   border: 1px solid;
   opacity: 40%;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .modal__input:hover {
