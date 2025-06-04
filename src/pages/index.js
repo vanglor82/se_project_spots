@@ -58,19 +58,21 @@ api
 
 const profileEditBtn = document.querySelector(".profile__edit-btn");
 const profileAddBtn = document.querySelector(".profile__add-btn");
+const profileImageBtn = document.querySelector(".profile__image-btn");
+
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
+const profileImage = document.querySelector(".profile__image");
 
 const imageModal = document.querySelector("#image-modal");
-const profileImage = document.querySelector(".profile__image");
-const profileImageBtn = document.querySelector(".profile__image-btn");
+const imageFormElement = imageModal.querySelector(".modal__form");
+const imageModalInput = imageModal.querySelector("#profile-image-input");
+const imageModalSubmit = imageModal.querySelector(".modal__submit-btn");
 
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
-const editModalDescriptionInput = editModal.querySelector(
-  "#profile-description-input"
-);
+const editModalDescriptionInput = editModal.querySelector("#profile-description-input");
 
 const addModal = document.querySelector("#add-modal");
 const addFormElement = addModal.querySelector(".modal__form");
@@ -177,6 +179,20 @@ function handleAddFormSubmit(evt) {
   closeModal(addModal);
 }
 
+function handleImageFormSubmit(evt) {
+  evt.preventDefault();
+  const newImageUrl = imageModalInput.value;
+  profileImage.src = newImageUrl;
+  api
+    .editUserInfo({ avatar: newImageUrl })
+    .then((data) => {
+      closeModal(imageModal);
+      imageModalInput.value = "";
+      disableButton(imageModalSubmit, settings);
+    })
+    .catch(console.error);
+}
+
 profileEditBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
@@ -203,5 +219,6 @@ closeButtons.forEach((button) => {
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 addFormElement.addEventListener("submit", handleAddFormSubmit);
+imageFormElement.addEventListener("submit", handleImageFormSubmit);
 
 enableValidation(settings);
