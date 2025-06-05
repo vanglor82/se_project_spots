@@ -81,7 +81,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
-          <form name="edit-profile" class="modal__form">
+          <form id="edit-profile" class="modal__form">
             <label for="profile-name-input" class="modal__label">
               Name
               <input
@@ -117,7 +117,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New post</h2>
-          <form name="add-link" class="modal__form">
+          <form id="add-link" class="modal__form">
             <label for="add-link-input" class="modal__label">
               Image link
               <input
@@ -165,7 +165,7 @@
       <div class="modal__container">
         <button type="button" class="modal__close-btn"></button>
         <h2 class="modal__title">Edit profile avatar</h2>
-        <form name="edit-image-profile" class="modal__form">
+        <form id="edit-image-profile" class="modal__form">
           <label for="profile-image-input" class="modal__label">
             Profile Picture
             <input
@@ -179,6 +179,16 @@
             <span id="profile-image-input-error" class="modal__error"></span>
           </label>
           <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="delete-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close-btn"></button>
+        <h2 class="modal__title">Are you sure you want to delete this image?</h2>
+        <form id="delete-modal" class="modal__form">
+          <button type="submit" class="modal__submit-btn">Delete</button>
+          <button type="button" class="modal__submit-btn">Cancel</button>
         </form>
       </div>
     </div>
