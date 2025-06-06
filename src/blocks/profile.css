@@ -8,6 +8,7 @@
   position: relative;
   width: 190px;
   height: 190px;
+  margin: 0 20px 0 0;
 }
 
 .profile__image {
@@ -15,6 +16,7 @@
   height: 190px;
   margin-right: 20px;
   border-radius: 8px;
+  padding: 0;
 }
 
 .profile__image-btn {
@@ -51,7 +53,6 @@
   margin: 0 0 12px;
   font-weight: 500;
   font-size: 32px;
-  line-height: 32px;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -61,10 +62,9 @@
 }
 
 .profile__description {
-  margin: 0;
+  margin: 0 0 12px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 16px;
   opacity: 70%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -131,6 +131,13 @@
     text-align: center;
     padding-top: 20px;
   }
+
+  .profile__image-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 0 20px;
+  }
+
   .profile__image {
     margin: 0 0 12px;
     width: 80px;
@@ -139,6 +146,10 @@
 
   .profile__image-btn {
     visibility: visible;
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
   }
 
   .profile__image-btn::after {

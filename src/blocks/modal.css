@@ -30,6 +30,12 @@
   padding: 32px 50px;
 }
 
+.modal__container_delete {
+  background-color: #fff;
+  max-width: 630px;
+  min-height: 172px;
+}
+
 .modal__container_preview {
   padding: 0;
   background-color: transparent;
@@ -48,7 +54,7 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url('../images/close.svg');
+  background-image: url("../images/close.svg");
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -59,7 +65,7 @@
 }
 
 .modal__close-btn_preview {
-  background-image: url('../images/closewhite.svg');
+  background-image: url("../images/closewhite.svg");
   position: absolute;
   background-color: transparent;
   top: 0;
@@ -67,7 +73,17 @@
 }
 
 .modal__close-btn_preview:hover {
-  background-image: url('../images/closehover.svg');
+  background-image: url("../images/closehover.svg");
+}
+
+.modal__close-btn_delete {
+  top: 0;
+  right: -50px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/closewhite.svg");
+  background-color: transparent;
+  border: none;
 }
 
 .modal__caption {
@@ -93,6 +109,11 @@
   font-weight: 500;
   line-height: 32px;
   width: 630px;
+}
+
+.modal__title-delete {
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
 .modal__label {
@@ -130,7 +151,7 @@
   width: 156px;
   padding: 18px 0;
   background-color: #000;
-  color: #FCF5E5;
+  color: #fcf5e5;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
@@ -150,6 +171,36 @@
 .modal__submit-btn_disabled:hover {
   cursor: default;
   opacity: 50%;
+}
+
+.modal__submit-btn_delete {
+  background-color: #ff6565;
+  border: none;
+  color: #212121;
+  margin: 0 20px 0 99px;
+}
+
+.modal__submit-btn_delete:hover {
+  opacity: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #ff3333;
+  color: #212121;
+  cursor: url("../images/large-cursor.svg"), pointer;
+}
+
+.modal__submit-btn_cancel {
+  background-color: #fff;
+  color: #212121;
+  border: 1px solid;
+  /* margin-right: 80px; */
+}
+
+.modal__submit-btn_cancel:hover {
+  opacity: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #212121;
+  color: #fff;
+  cursor: url("../images/large-cursor.svg"), pointer;
 }
 
 .modal__error {
@@ -208,6 +259,29 @@
   .modal__input {
     font-size: 16px;
   }
+
+  .modal__submit-btn_delete {
+    margin: 0 62px 0 62px;
+    width: 152px;
+    height: 52px;
+  }
+
+  .modal__submit-btn_cancel {
+    width: 152px;
+    height: 52px;
+    margin: 12px 62px 0 62px;
+  }
+
+  .modal__title-delete {
+    max-width: 276px;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    margin: 0 0 16px;
+  }
+
+  .modal__close-btn_delete {
+    top: -50px;
+    right: 0px;
+  }
 }
-
-
