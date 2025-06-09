@@ -37,6 +37,7 @@
   border-radius: 8px;
   transition: visibility 0.3s ease-in-out;
   cursor: url('../images/large-cursor.svg'), pointer;
+  color: #fff;
 }
 
 .profile__image-btn::after {

@@ -40,6 +40,7 @@ const profileImage = document.querySelector(".profile__image");
 const imageModal = document.querySelector("#image-modal");
 const imageFormElement = imageModal.querySelector(".modal__form");
 const imageModalInput = imageModal.querySelector("#profile-image-input");
+const imageSubmitBtn = imageModal.querySelector(".modal__submit-btn");
 
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
@@ -47,6 +48,7 @@ const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
 );
+const editModalSubmit = editModal.querySelector(".modal__submit-btn");
 
 const addModal = document.querySelector("#add-modal");
 const addFormElement = addModal.querySelector(".modal__form");
@@ -55,9 +57,12 @@ const addModalCaptionInput = addModal.querySelector("#add-caption-input");
 const addModalSubmit = addModal.querySelector(".modal__submit-btn");
 
 const previewModal = document.querySelector("#preview-modal");
+const previewModalImage = previewModal.querySelector(".modal__image");
+const previewModalCaption = previewModal.querySelector(".modal__caption");
 
 const deleteModal = document.querySelector("#delete-modal");
 const deleteFormElement = deleteModal.querySelector(".modal__form");
+const cancelButton = deleteModal.querySelector(".modal__submit-btn_cancel")
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
@@ -93,6 +98,8 @@ function getCardElement(data) {
 
   cardImageElement.addEventListener("click", () => {
     openModal(previewModal);
+    previewModalImage.src = data.link;
+    previewModalCaption.textContent = data.name;
   });
 
   return cardElement;
@@ -160,6 +167,7 @@ function handleEditFormSubmit(evt) {
     .then(() => {
       profileName.textContent = editModalNameInput.value;
       profileDescription.textContent = editModalDescriptionInput.value;
+      disableButton(editModalSubmit, settings);
       closeModal(editModal);
     })
     .catch(console.error)
@@ -201,6 +209,7 @@ function handleImageFormSubmit(evt) {
     .then((data) => {
       profileImage.src = data.avatar;
       evt.target.reset();
+      disableButton(imageSubmitBtn, settings);
       closeModal(imageModal);
     })
     .catch(console.error)
@@ -243,6 +252,10 @@ profileAddBtn.addEventListener("click", () => {
 
 profileImageBtn.addEventListener("click", () => {
   openModal(imageModal);
+});
+
+cancelButton.addEventListener("click", () => {
+  closeModal(deleteModal);
 });
 
 closeButtons.forEach((button) => {
